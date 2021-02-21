@@ -2,17 +2,12 @@
 
 package src.Klassen;
 
-public class Eindhalte {
-    private String naam;
-    private int bevolking;
-
+public class Eindhalte extends Halte{
     public Eindhalte(String n, int bevolking){
-        this.naam = n;
-        this.bevolking = bevolking;
+        super(n, bevolking);
     }
 
-    public int getBevolking(){return this.bevolking;}
-    public String getNaam(){return this.naam;}
-    public void setNaam(String n){this.naam = n;}
-    
+    public String toString(){
+        return "Eindhalte "+super.getNaam()+", bevolking: "+super.getBevolking()+" inwoners";
+    }
 }
